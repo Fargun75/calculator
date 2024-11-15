@@ -33,10 +33,9 @@ body {
     height: 70px;
     margin-top: 30px;
     margin-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
     justify-content: flex-end;
     font-size: 50px;
+    overflow: hidden;
 }
 
 .button {
@@ -52,7 +51,6 @@ body {
 
 #ac {
     flex: 1;
-    color: yellow;
 }
 
 #empty {
