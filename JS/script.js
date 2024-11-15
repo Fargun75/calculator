@@ -1,4 +1,4 @@
-function add(a,b) {
+function add(a, b) {
     return a + b;
 }
 
@@ -19,10 +19,28 @@ let secondNumber;
 let operator;
 
 function operate(operat, num1, num2) {
-    if(operat == '+') return add(num1, num2);
-    if(operat == '-') return subtract(num1, num2);
-    if(operat == '*') return multiply(num1, num2);
-    if(operat == '/') return divide(num1, num2);
+    if (operat == '+') return add(num1, num2);
+    if (operat == '-') return subtract(num1, num2);
+    if (operat == '*') return multiply(num1, num2);
+    if (operat == '/') return divide(num1, num2);
 }
 
-console.log(operate('/', 4, 4));
+const display = document.querySelector('#display');
+display.textContent = '0';
+let number = [];
+
+const numberButtons = document.querySelectorAll('.number');
+numberButtons.forEach((button) => button.addEventListener('click', (e) => {
+    number.push(e.target.id);
+    firstNumber = parseInt(number.join(''));
+    display.textContent = firstNumber;
+}));
+
+const operatorButtons = document.querySelectorAll('.operator');
+operatorButtons.forEach((button) => button.addEventListener('click', (e) => {
+    if(!firstNumber) {
+    }
+    console.log(firstNumber);
+}));
+
+
