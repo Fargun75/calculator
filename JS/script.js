@@ -46,7 +46,7 @@ let number = [];
 const numberButtons = document.querySelectorAll('.number');
 numberButtons.forEach((button) => button.addEventListener('click', (e) => {
     number.push(e.target.id);
-    newNumber = parseInt(number.join(''));
+    let newNumber = parseFloat(number.join(''));
     populateDisplay(newNumber);
 }));
 
