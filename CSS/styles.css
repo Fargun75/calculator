@@ -61,11 +61,16 @@ body {
 }
 
 .operator,
-.equal {
+.equal,
+.delete {
     background-color: #31511E;
     color: #F6FCDF;
 }
 
 .clicked {
     border: solid #F6FCDF 1px;
+}
+
+.delete {
+    font-size: 48px;
 }
