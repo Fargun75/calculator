@@ -100,7 +100,13 @@ buttons.forEach((button) => button.addEventListener('mouseup', (e) => {
     e.target.classList.remove('clicked');
 }));
 
-
+const deleteButton = document.querySelector('#delete');
+deleteButton.addEventListener('click', (e) => {
+    number.pop();
+    let newNumber = parseFloat(number.join(''));
+    populateDisplay(newNumber);
+    console.log(number);
+})
 
 
 
