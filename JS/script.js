@@ -77,7 +77,6 @@ equalButton.addEventListener('click', () => {
     } else {
         secondNumber = parseFloat(number.join(''));
         let result = operate(operator, firstNumber, secondNumber);
-        console.log(result);
         populateDisplay(result);
     }
 })
@@ -105,8 +104,11 @@ deleteButton.addEventListener('click', (e) => {
     number.pop();
     let newNumber = parseFloat(number.join(''));
     populateDisplay(newNumber);
-    console.log(number);
 })
 
-
-
+const key = document.querySelector('body');
+key.addEventListener('keydown', (e) => {
+    number.push(e.key);
+    let newNumber = parseFloat(number.join(''));
+    populateDisplay(newNumber);
+})
